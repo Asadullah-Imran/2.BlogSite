@@ -8,6 +8,11 @@ $teal: teal;
     background-color: red;
     width: 1024px;
 
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
     //Login and Register pages
     .auth {
       display: flex;
@@ -55,12 +60,45 @@ $teal: teal;
     //Navbar
     .navbar {
       .container {
+        background-color: lightblue;
         padding: 10px 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .logo {
+          img {
+            height: 60px;
+          }
         }
         .links {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          .link {
+            font-size: 16px;
+            font-weight: 300;
+          }
+          span {
+            cursor: pointer;
+          }
+          .write {
+            background-color: $lightGreen;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid transparent;
+
+            &:hover {
+              color: $teal;
+              background-color: white;
+              border: 1px solid $teal;
+            }
+          }
         }
       }
     }
